@@ -1,0 +1,363 @@
+@tailwind base; /* Preflight will be injected here */
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--foreground-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    hyphens: auto;
+  }
+}
+
+.custom-shadow {
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
+}
+
+
+
+
+
+/* Estilos generales */
+body {
+  font-family: Arial; /* Cambia la fuente a Arial */
+}
+
+/* Estilos para el contenedor del formulario de inicio de sesión */
+.login-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('/assets/imglogin.png');
+  background-size: cover;
+}
+
+/* Estilos para el fondo con transparencia */
+.background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(214, 219, 220, 0.5); /* Color blanco con opacidad */
+}
+
+/* Estilos para el logo */
+.logo {
+  position: absolute;
+  top: 20px; /* Ajusta según sea necesario */
+  left: 20px; /* Ajusta según sea necesario */
+  width: 250px; /* Ajusta el tamaño del logo */
+  z-index: 1; /* Asegura que esté por encima del formulario */
+}
+
+/* Estilos para el formulario de inicio de sesión */
+.login-form {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.9); /* Color de fondo con opacidad */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 400px;
+  z-index: 1;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.login-form h2 {
+  margin-bottom: 20px;
+  color: #2b46e1;
+  font-size: 20px; /* Tamaño de letra para h2 */
+}
+
+.form-control {
+  margin-bottom: 20px;
+  text-align: left; /* Alinear el texto a la izquierda */
+}
+
+.form-control label {
+  display: block;
+  margin-bottom: 5px;
+  color: #1A71AB;
+}
+
+.form-control input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+}
+
+.btn-login {
+  background-color: #1A71AB; /* Color verde agua */
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-login:hover {
+  background-color: #1BC3EA; /* Cambio de color al pasar el ratón */
+}
+
+.container {
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+  /*background-color: #f0f8f7; /* Verde agua */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.heading {
+  text-align: center;
+  color:#1A71AB; /* Verde agua oscuro */
+}
+
+.expediente-fecha {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  color: #1A71AB; /* Verde agua oscuro */
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.fieldset {
+  border: 2px solid #1A71AB; /* Verde agua oscuro */
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.legend {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #1A71AB; /* Verde agua oscuro */
+  margin-bottom: 10px;
+}
+
+.label {
+  font-weight: bold;
+  color: #1A71AB; /* Verde agua oscuro */
+}
+
+.input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.radio-label {
+  margin-right: 10px;
+  color: #1A71AB; 
+}
+
+.checkbox-label {
+  color: #0d4579; 
+}
+
+input[type="submit"],
+input[type="reset"] {
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2f67af; /* Verde agua oscuro */
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.registration-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('/assets/imglogin.png'); /* Cambia el nombre de la imagen de fondo */
+  background-size: cover;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(214, 219, 220, 0.925); /* Fondo semitransparente del contenido */
+  border-radius: 10px;
+}
+
+.registration-form {
+  width: 300px;
+  max-width: 100%;
+}
+
+.form-control {
+  margin-bottom: 15px;
+}
+
+.form-control label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-control input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn-register {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Estilos para todos los títulos */
+h1, h2, h3, h4, h5, h6 {
+  font-size: 28px;
+  color: #2b46e1; /* Color azul oscuro */
+  margin-bottom: 20px;
+}
+
+/* Estilos para los campos de entrada */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="date"],
+input[type="submit"],
+input[type="reset"] {
+  width: calc(100% - 24px);
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+/* Estilos para el botón de enviar */
+input[type="submit"],
+input[type="reset"] {
+  background-color: #1A71AB; /* Color azul */
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background-color: #1A71AB; /* Color azul oscuro */
+}
+
+/* Estilos para los campos de leyenda y título */
+legend {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1A71AB; /* Color azul oscuro */
+  margin-bottom: 15px;
+}
+
+/* Estilos para los campos de etiqueta */
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #555;
+  font-size: 18px;
+}
+
+/* Estilos para el historial clínico */
+.patient-info {
+  background-color: #f0f8f7; /* Color de fondo para la sección de información del paciente */
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.medical-history {
+  background-color: #f9f9f9; /* Color de fondo para la sección de historial médico */
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.treatments {
+  background-color: #f0f0f0; /* Color de fondo para la sección de tratamientos */
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.patient-info h2,
+.medical-history h2,
+.treatments h2 {
+  color: #1A71AB; /* Color de título */
+  margin-bottom: 15px;
+}
+
+.patient-info p,
+.medical-history p,
+.treatments p {
+  color: #555; /* Color de texto */
+  font-size: 10px;
+  line-height: 2.0;
+}
+
+.enfermedades-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.enfermedades-container div {
+  display: flex;
+  margin-right: 20px;
+  margin-bottom: 10px; /* Añade un margen inferior para separar las filas */
+}
+
+.enfermedades-container label {
+  margin-left: 5px;
+}
+
+.enfermedades-container input[type="checkbox"] {
+  transform: scale(2.0); /* Ajusta el tamaño del checkbox */
+  margin-right: 5px;
+}
